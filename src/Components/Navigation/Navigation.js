@@ -28,7 +28,7 @@ export default class componentName extends Component {
         </header>
 		<div class="sidebar-navigation hidde-sm hidden-xs">
             <div class="logo">
-                
+                <a href="#">Yogesh<em>Bhattarai</em></a>
             </div>
             <nav>
                 <ul>

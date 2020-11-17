@@ -6,7 +6,7 @@ import Home from './Home/Home'
 const Body = (props) => {
     return (
         <HOC>
-            <Home></Home>
+            <Home/>
         </HOC>
         
     )

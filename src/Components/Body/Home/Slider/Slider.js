@@ -1,13 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import HOC from '../../HOC/HOC'
-import './Home.css'
-const Home = () => {
+import HOC from '../../../HOC/HOC'
+
+const Slider=() =>{
     return (
         <HOC>
-            <div class="slider">
-<div class="Modern-Slider content-section" id="top">
-    <div class="item item-1">
+                <div class="item item-1">
         <div class="img-fill">
         <div class="image"></div>
         <div class=" info">
@@ -30,14 +27,9 @@ const Home = () => {
             </div>
         </div>
     </div>
-</div>
-</div>
 
         </HOC>
     )
 }
 
-
-
-
-export default  Home;
+export default Slider

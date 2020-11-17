@@ -1,0 +1,25 @@
+.point{
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    opacity:0.6;
+}
+
+.github a{
+    color:white;
+    font-weight:700;
+    background:purple;
+}
+
+.github :hover a{
+    color:purple;
+    background:white;
+}
+
+.cardd-rounded{
+ padding:50px;
+ background:rgba(0, 0, 0, 0.308);
+ border-radius:20px;
+ justify-content:right;
+ color:blue;
+}

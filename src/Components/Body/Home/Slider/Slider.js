@@ -1,5 +1,7 @@
 import React from 'react'
 import HOC from '../../../HOC/HOC'
+import { Link } from 'react-router-dom'
+
 
 const Slider=() =>{
     return (

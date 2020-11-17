@@ -1,14 +1,17 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
 import HOC from '../HOC/HOC'
 import Home from './Home/Home'
+import Featured from './Featured/Featured.js'
 
 const Body = (props) => {
     return (
         <HOC>
-            <Home/>
-        </HOC>
-        
+            <Switch>
+                <Route path="/" exact component={Home}/>
+                <Route path="/featured" component ={withRouter(Featured)}/>
+            </Switch>
+        </HOC>        
     )
 }
 

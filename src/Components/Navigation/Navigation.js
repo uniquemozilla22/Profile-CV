@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import HOC from '../HOC/HOC'
 import './Navigation.css'
+import { NavLink , Link } from 'react-router-dom'
 
-export default class componentName extends Component {
+export default class Navigation extends Component {
     render() {
         return (
             <HOC>
 				<header class="nav-down responsive-nav hidden-lg hidden-md">
-            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                     <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -16,12 +17,16 @@ export default class componentName extends Component {
             <div id="main-nav" class="collapse navbar-collapse">
                 <nav>
                     <ul class="nav navbar-nav">
-                        <li><a href="#top">Home</a></li>
-                        <li><a href="#featured">Featured</a></li>
-                        <li><a href="#projects">Recent Projects</a></li>
-                        <li><a href="#video">Presentation</a></li>
-                        <li><a href="#blog">Blog Entries</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        
+                        <li><Link to="/featured">Featured</Link></li>
+                        
+                        <li><Link to="/recent">Recent Project</Link></li>
+                        
+                        <li><Link to="/blog">Blog</Link></li>
+                        
+                        <li><Link to="/contact">contact</Link></li>
+                        
                     </ul>
                 </nav>
             </div>
@@ -30,51 +35,24 @@ export default class componentName extends Component {
             <div class="logo">
                 <a href="#">Yogesh<em>Bhattarai</em></a>
             </div>
+            
             <nav>
                 <ul>
-                    <li>
-                        <a href="#top">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#featured">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Featured
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#projects">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Recent Work
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#video">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Presentation
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#blog">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Blog Entires
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Contact Us
-                        </a>
-                    </li>
-                </ul>
+                <li><NavLink to="/" activeClassName='active-section' exact><span class="rect"></span>
+                            <span class="circle"></span>Home</NavLink></li>
+                        
+                        <li><NavLink to="/featured" activeClassName='active-section'><span class="rect"></span>
+                            <span class="circle"></span>Featured</NavLink></li>
+                        
+                        <li><NavLink to="/recent" activeClassName='active-section'><span class="rect"></span>
+                            <span class="circle"></span>Recent Project</NavLink></li>
+                        
+                        <li><NavLink to="/blog" activeClassName='active-section'><span class="rect"></span>
+                            <span class="circle"></span>Blog</NavLink></li>
+                        
+                        <li><NavLink to="/contact" activeClassName='active-section'><span class="rect"></span>
+                            <span class="circle"></span>Contact</NavLink></li>
+                 </ul>
             </nav>
             <ul class="social-icons">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -88,3 +66,5 @@ export default class componentName extends Component {
         )
     }
 }
+
+

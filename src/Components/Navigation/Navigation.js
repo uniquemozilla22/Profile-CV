@@ -18,13 +18,8 @@ export default class Navigation extends Component {
                 <nav>
                     <ul class="nav navbar-nav">
                         <li><Link to="/">Home</Link></li>
-                        
-                        <li><Link to="/featured">Featured</Link></li>
-                        
                         <li><Link to="/recent">Recent Project</Link></li>
-                        
                         <li><Link to="/blog">Blog</Link></li>
-                        
                         <li><Link to="/contact">contact</Link></li>
                         
                     </ul>
@@ -33,16 +28,13 @@ export default class Navigation extends Component {
         </header>
 		<div class="sidebar-navigation hidde-sm hidden-xs">
             <div class="logo">
-                <a href="#">Yogesh<em>Bhattarai</em></a>
+                <a href="#">Yogesh<em> B.</em></a>
             </div>
             
             <nav>
                 <ul>
                 <li><NavLink to="/" activeClassName='active-section' exact><span class="rect"></span>
                             <span class="circle"></span>Home</NavLink></li>
-                        
-                        <li><NavLink to="/featured" activeClassName='active-section'><span class="rect"></span>
-                            <span class="circle"></span>Featured</NavLink></li>
                         
                         <li><NavLink to="/recent" activeClassName='active-section'><span class="rect"></span>
                             <span class="circle"></span>Recent Project</NavLink></li>

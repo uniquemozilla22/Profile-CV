@@ -9,7 +9,7 @@ const Body = (props) => {
         <HOC>
             <Switch>
                 <Route path="/" exact component={Home}/>
-                <Route path="/featured" component ={withRouter(Featured)}/>
+                <Route path="" component={} />
             </Switch>
         </HOC>        
     )

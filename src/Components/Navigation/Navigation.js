@@ -18,7 +18,7 @@ export default class Navigation extends Component {
                 <nav>
                     <ul class="nav navbar-nav">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/recent">Recent Project</Link></li>
+                        <li><Link to="/project">Recent Project</Link></li>
                         <li><Link to="/blog">Blog</Link></li>
                         <li><Link to="/contact">contact</Link></li>
                         
@@ -36,7 +36,7 @@ export default class Navigation extends Component {
                 <li><NavLink to="/" activeClassName='active-section' exact><span class="rect"></span>
                             <span class="circle"></span>Home</NavLink></li>
                         
-                        <li><NavLink to="/recent" activeClassName='active-section'><span class="rect"></span>
+                        <li><NavLink to="/project" activeClassName='active-section'><span class="rect"></span>
                             <span class="circle"></span>Recent Project</NavLink></li>
                         
                         <li><NavLink to="/blog" activeClassName='active-section'><span class="rect"></span>

@@ -1,40 +1,48 @@
 import React, { Component } from 'react'
-import data from './sample.json'
 import Project from './Project/Project.js'
 import Axios from 'axios'
+import Spinner from '../../UI/Spinner/Spinner'
 
 class Projects extends Component {
 
     state={
-        repos:data
+        repos:{
+        },
+        spinner:true
     }
 
     componentDidMount=()=>{
-        Axios.get('https://api.github.com/users/uniquemozilla22/repos.json').then(response=>{
-            console.log(response.data);
+        Axios.get('https://api.github.com/users/uniquemozilla22/repos').then(response=>{
+            console.log(response);
 
             this.setState({
                 ...this.state,
-                repos:this.response.data
-            })
+                repos:response.data,
+                spinner:false
+            })            
         })
     }
 
     render() {
 
-        let project_printing=[]
+        let project_printing=this.state.spinner?<Spinner/>:[]
 
-        this.state.repos.map((key,index)=>{
+        
+
+        Object.keys(this.state.repos).map((key,index)=>{
 
             let repos= this.state.repos[index]
 
-            project_printing[index]=<Project name={repos.name} desc={repos.description} date={repos.created_at} image={repos.avatar_url} stars={repos.stargazers_count} forks={repos.forks_count} watch={repos.watchers_count}></Project>;
+           return project_printing[index]=<Project name={repos.name} desc={repos.description} date={repos.created_at} image={repos.avatar_url} stars={repos.stargazers_count} forks={repos.forks_count} watch={repos.watchers_count}></Project>;
 
-        })
+        })  
+
+        
+
         
 
         return (
-            <div className="page-content">
+            <div class="page-content">
                 <section id="projects" class="content-section">
                 <div class="section-heading">
                     <h1>Recent<br/><em>Projects</em></h1>
@@ -42,12 +50,8 @@ class Projects extends Component {
                     </div>
                 <div class="section-content">
                     <div class="container">
-                        <ul>
-                            
+                        <ul>                            
                             {project_printing}
-
-
-
                         </ul>
                     </div>
                 </div>            

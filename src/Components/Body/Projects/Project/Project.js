@@ -2,11 +2,12 @@ import React from 'react'
 import './Project.css'
 
 
+
 const Project = (props) => {
 
   let image="https://dl2.tut4dev.ir/files/1152/banner.png?dshadow.Angle=0&dshadow.Distance=0&dshadow.Opacity=70&dshadow.Color=Black&dshadow.Softness=10&width=300&height=200&mode=boxpad&colorfulbg=true"
 
-  if(props.image)
+  if(!props.image)
   {
     image=props.image
   }

@@ -5,6 +5,7 @@ import Contact from './Contact/Contact'
 import Home from './Home/Home'
 import Projects from './Projects/Projects.js'
 import Blog from './Blog/Blog.js'
+import Spinner from '../UI/Spinner/Spinner'
 
 const Body = (props) => {
     return (
@@ -14,6 +15,7 @@ const Body = (props) => {
                 <Route path="/project" component={Projects} />
                 <Route path="/blog" component={Blog}/>
                 <Route path="/contact" component={Contact}/>
+                <Route path="/spinner" component={Spinner}/>
             </Switch>
         </HOC>        
     )

@@ -2,12 +2,11 @@ import React, { Component } from 'react'
 import Project from './Project/Project.js'
 import Axios from 'axios'
 import Spinner from '../../UI/Spinner/Spinner'
-
+import './Projects.css'
 class Projects extends Component {
 
     state={
-        repos:{
-        },
+        repos: " ",
         spinner:true
     }
 
@@ -25,39 +24,38 @@ class Projects extends Component {
 
     render() {
 
-        let project_printing=this.state.spinner?<Spinner/>:[]
+        let github_printing=[]
 
-        
+        if(this.state.repos!==" ")
+        {
+            Object.keys(this.state.repos).map((key,index)=>{
 
-        Object.keys(this.state.repos).map((key,index)=>{
+                let repos= this.state.repos[index]
+    
+               return github_printing[index]=<Project name={repos.name} desc={repos.description} date={repos.created_at}  stars={repos.stargazers_count} forks={repos.forks_count} watch={repos.watchers_count} code={repos.language}></Project>;
+    
+            })  
+    
+        }
+        else{
+            github_printing[0]=<Spinner/>
 
-            let repos= this.state.repos[index]
-
-           return project_printing[index]=<Project name={repos.name} desc={repos.description} date={repos.created_at} image={repos.avatar_url} stars={repos.stargazers_count} forks={repos.forks_count} watch={repos.watchers_count}></Project>;
-
-        })  
-
-        
-
-        
+        }       
 
         return (
-            <div class="page-content">
-                <section id="projects" class="content-section">
-                <div class="section-heading">
-                    <h1>Recent<br/><em>Projects</em></h1>
-                    <h1><a href="https://github.com/uniquemozilla22"><i class="fa fa-github"></i>uniquemozilla22/repos</a></h1>
-                    </div>
-                <div class="section-content">
-                    <div class="container">
-                        <ul>                            
-                            {project_printing}
-                        </ul>
-                    </div>
-                </div>            
-            </section>
-                
+         <div className="page-content">
+                <div class="section-heading container-fluid">
+                    <h1>Github<br/><em>Projects</em></h1>
+                    <a href="https://github.com/uniquemozilla22/repositories"><h1><br/><em><i className="fa fa-github"></i>uniquemozilla22/repo</em></h1></a>
+                </div>
+                <hr/>
+            <div className="container-fluid">
+                <div class="github-cards container-fluid">
+                    {github_printing}
+
+                </div>
             </div>
+        </div>
         )
     }
 }

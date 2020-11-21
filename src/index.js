@@ -5,11 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.css"
 import { BrowserRouter } from 'react-router-dom';
+import './Assets/css/style.css'
+
 import './Assets/css/bootstrap.css'
 import './Assets/css/fontAwesome.css'
 import './Assets/css/light-box.css'
 import './Assets/js/vendor/bootstrap.min.js'
-import './Assets/css/style.css'
 
 ReactDOM.render(
   <BrowserRouter>

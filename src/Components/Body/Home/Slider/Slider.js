@@ -17,14 +17,12 @@ const Slider=() =>{
                   </p>
               <div class="github white-button">
                   
-                  <Link to="https://www.github.com/uniquemozilla22"><i class="ion-social-github"></i>Github</Link>
+                  <a href="https://www.github.com/uniquemozilla22"><i class="fa fa-github"></i> Github</a>
                   
-                  <Link to="https://www.github.com/uniquemozilla22"><i class="ion-social-github"></i>View Resume</Link>
+                  <Link to="https://www.github.com/uniquemozilla22"><i class="fa fa-address-book"></i> View Resume</Link>
 
               </div>
-              <div class="github white-button">
-                  
-              </div>
+              
             </div>
             </div>
         </div>

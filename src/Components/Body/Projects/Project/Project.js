@@ -5,45 +5,42 @@ import './Project.css'
 
 const Project = (props) => {
 
-  let image="https://dl2.tut4dev.ir/files/1152/banner.png?dshadow.Angle=0&dshadow.Distance=0&dshadow.Opacity=70&dshadow.Color=Black&dshadow.Softness=10&width=300&height=200&mode=boxpad&colorfulbg=true"
+  let image="https://pngimg.com/uploads/github/github_PNG40.png"
 
-  if(!props.image)
-  {
-    image=props.image
-  }
   
     return (
-        <div className="col-4">
-             <li class="booking-card" style={{'backgroundImage':"url("+image+")"}}>
-             <div class="book-container">
-      <div class="content">
-        <a href={"https://www.github.com/uniquemozilla22/"+props.link} class="btn">Visit Repo</a>
-      </div>
-    </div>
-    <div class="informations-container">
-      <h2 class="title"><a href={"https://www.github.com/uniquemozilla22/"+props.link}>{props.name}</a></h2>
-      <p class="sub-title">{props.desc}</p>
-      <p class="price">{props.date}</p>
-      <div class="more-information">
-        <div class="info-and-date-container">
-          <div class="box info">
-          <i class="fa fa-star fa-2x"></i>
-            <p>{props.stars}</p>
-          </div>
-          <div class="box info">
-          <i class="fa fa-code-fork fa-2x"></i>            
-            <p>{props.forks}</p>
-          </div>
-          
-          <div class="box date">
-          <i class="fa fa-eye fa-2x"></i>            
-            <p>{props.watch}</p>
-          </div>
-        </div>
-        </div>
-    </div>
+        <div className=" col-xs-12 col-sm-6 col-md-6 col-lg-4">
+             <a href={"https://www.github.com/uniquemozilla22/"+props.name} class="github-card" data-github="Nexmo/nexmo-java">
+    <h3>{props.name}</h3> <span class="github-card__meta">
+      <i class="fa fa-day" aria-hidden="true"></i>
+      <span data-forks>
+        {props.date}
+      </span>
+    </span>
+    <p>{props.desc}</p>
+    <span class="github-card__meta">
+      <span class="github-card__language-icon" >●</span> {props.code}
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <span data-stars>
+        {props.stars}
+      </span>
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-code-fork" aria-hidden="true"></i>
+      <span data-forks>
+        {props.forks}
+      </span>
+    </span>
+    <span class="github-card__meta">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <span data-forks>
+        {props.watch}
+      </span>
+    </span>
     
-  </li>
+  </a>
         </div>
     )
 }

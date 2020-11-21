@@ -12,8 +12,8 @@ const Contact = (props) => {
                 <div id="contact-content">
                     <div class="section-heading">
                         <h1>Contact<br/><em>Yogesh  </em></h1>
-                        <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
-                        <br/>Phasellus luctus odio eget dui imperdiet.</p>
+                        <p>You can visit my on my socials 
+                        <br/><em>Or Leave me a message </em></p>
                         
                     </div>
                     <div class="section-content">

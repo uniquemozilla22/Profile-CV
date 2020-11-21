@@ -20,7 +20,7 @@ export default class Navigation extends Component {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/project">Recent Project</Link></li>
                         <li><Link to="/blog">Blog</Link></li>
-                        <li><Link to="/contact">contact</Link></li>
+                        <li><Link to="/contact">Contact Me</Link></li>
                         
                     </ul>
                 </nav>
